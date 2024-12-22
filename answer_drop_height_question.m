@@ -24,5 +24,7 @@ pos_double_height = simulate(height, drop_height * 2, 1.5, angle * pi / 180, fal
 [pos_full_height, v_full_height] = simulate(height, drop_height, 1.5, angle * pi / 180, false);
 pos_half_height = simulate(height, drop_height/2, 1.5, angle * pi / 180, false);
 display(sprintf("\n\nheight: %f drop_height: %f", height, drop_height));
-display(sprintf("distance: %f %f %f (v=%f)", pos_half_height(1), pos_full_height(1), pos_double_height(1), norm(v_full_height)));
+display(sprintf("distance: %f %f %f (v=%f, energy=%f,%f)",
+		pos_half_height(1), pos_full_height(1), pos_double_height(1),
+		norm(v_full_height), 9.81 * (height + drop_height), 0.5*norm(v_full_height)^2));
 display(sprintf("ratios: %f %f", pos_full_height(1) / pos_half_height(1),    pos_double_height(1) / pos_full_height(1)));
