@@ -1,4 +1,4 @@
-Questions to answer:
+# Questions to answer
 
 How much farther does making the drop 2x bigger take you?
 * Seems like it is roughly 1.5x, regardless of how big / fast you go off the drop.
